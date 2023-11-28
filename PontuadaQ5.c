@@ -7,8 +7,7 @@ int main()
 
     setlocale(LC_ALL, "portuguese");
 
-    int opcao;
-    int i;
+    int n, i;
     int contador = 0;
     char nomeProduto[999][200];
     int quantidade[200];
@@ -20,13 +19,13 @@ int main()
         printf("1  -  Adicionar venda\n");
         printf("2  -  Exibir total de vendas\n");
         printf("Escolha a opção desejada: ");
-        scanf("%d", &opcao);
+        scanf("%d", &n);
 
         fflush(stdin);
 
         system("cls || clear");
 
-        switch (opcao)
+        switch (n)
         {
         case 1:
 
@@ -63,7 +62,7 @@ int main()
             printf("Opção inválida!\n");
             break;
         }
-    } while (opcao != 2);
+    } while (n != 2);
 
     return 0;
 }
