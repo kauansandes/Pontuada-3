@@ -6,17 +6,14 @@ int main()
 {
     setlocale(LC_ALL, "portuguese");
 
-    int n;
-    char nome[999][200];
-    char numeroTelefone[999][200];
-    int i;
-    int salvo = 0;
+    char nome[999][200], numeroTelefone[999][200];
+    int n, i, salvo = 0;
 
     do
     {
         printf("1 - Salvar novo numero. \n");
         printf("2 - Exibir os numeros salvos. \n");
-        printf("\nDigite a opção ");
+        printf("\nDigite: ");
         scanf("%d", &n);
         printf("\n");
 
@@ -49,7 +46,7 @@ int main()
             break;
 
         default:
-            printf("Opção invalida. \n");
+            printf("OpÃ§Ã£o invalida. \n");
             break;
         }
 
