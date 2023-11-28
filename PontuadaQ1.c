@@ -12,18 +12,10 @@ int main()
     float peso[5];
     float altura[5];
     int i;
-    float maiorAltura = 0;
-    float menorAltura = 9999;
-    int maiorIdade = 0;
-    int menorIdade = 99999;
-    float maiorPeso = 0;
-    float menorPeso = 999999;
-    char nomeMaiorAltura[200];
-    char nomeMenorAltura[200];
-    char nomeMaiorIdade[200];
-    char nomeMenorIdade[200];
-    char nomeMaiorPeso[200];
-    char nomeMenorPeso[200];
+    int maiorIdade = 0, menorIdade = 99999;
+    float maiorPeso = 0, menorPeso = 999999, maiorAltura = 0, menorAltura = 9999;
+    ;
+    char nomeMaiorAltura[200], nomeMenorAltura[200], nomeMaiorIdade[200], nomeMenorIdade[200], nomeMaiorPeso[200], nomeMenorPeso[200];
 
     for (i = 0; i < 5; i++)
     {
@@ -43,49 +35,47 @@ int main()
         if (altura[i] > maiorAltura)
         {
             maiorAltura = altura[i];
-            strcpy(nomeMaiorAltura, nome[i]);
+            printf(nomeMaiorAltura, nome[i]);
         }
         if (altura[i] < menorAltura)
         {
             menorAltura = altura[i];
-            strcpy(nomeMenorAltura, nome[i]);
+            printf(nomeMenorAltura, nome[i]);
         }
 
         if (idade[i] > maiorIdade)
         {
             maiorIdade = idade[i];
-            strcpy(nomeMaiorIdade, nome[i]);
+            printf(nomeMaiorIdade, nome[i]);
         }
         if (idade[i] < menorIdade)
         {
             menorIdade = idade[i];
-            strcpy(nomeMenorIdade, nome[i]);
+            printf(nomeMenorIdade, nome[i]);
         }
 
         if (peso[i] > maiorPeso)
         {
             maiorPeso = peso[i];
-            strcpy(nomeMaiorPeso, nome[i]);
+            printf(nomeMaiorPeso, nome[i]);
         }
 
         if (peso[i] < menorPeso)
         {
             menorPeso = peso[i];
-            strcpy(nomeMenorPeso, nome[i]);
+            printf(nomeMenorPeso, nome[i]);
         }
         fflush(stdin);
     }
 
     printf("\nPessoa com a maior altura: %s  %.2f \n", nomeMaiorAltura, maiorAltura);
     printf("\nPessoa com a menor altura: %s  %.2f \n", nomeMenorAltura, menorAltura);
-    
+
     printf("\nPessoa com o maior peso: %s  %.2f \n", nomeMaiorPeso, maiorPeso);
     printf("\nPessoa com o menor peso: %s  %.2f \n", nomeMenorPeso, menorPeso);
-    
+
     printf("\nPessoa com a maior idade: %s  %d \n", nomeMaiorIdade, maiorIdade);
     printf("\nPessoa com a menor idade: %s  %d \n", nomeMenorIdade, menorIdade);
-
-
 
     return 0;
 }
